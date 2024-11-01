@@ -70,6 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>Latium Editor</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>Latium Editor</TargetName>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -144,16 +150,20 @@
     <ClCompile Include="LTE_Application.cpp" />
     <ClCompile Include="LTE_EDITOR.cpp" />
     <ClCompile Include="LTE_Main.cpp" />
+    <ClCompile Include="LTE_WindowClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LTE_Application.h" />
     <ClInclude Include="LTE_EDITOR.h" />
+    <ClInclude Include="LTE_WindowClass.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LT_EDITOR.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\checkBox.png" />
+    <Image Include="res\LTE_Logo.ico" />
     <Image Include="res\LTE_Logo.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

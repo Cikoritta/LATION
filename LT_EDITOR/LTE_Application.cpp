@@ -26,9 +26,11 @@ void LTE_Application::Update()
 {
 	while (m_Window->isOpen())
 	{
-		if (m_Editor->ifStart)
+		if (!m_Editor->ifStart)
 		{
 			m_Editor->Start();
+
+			m_Editor->ifStart = true;
 		}
 
 		m_Editor->Update();
@@ -48,7 +50,9 @@ void LTE_Application::Update()
 
 			if (m_Event->type == m_Event->Resized)
 			{
-				m_Window->setSize(sf::Vector2u(m_Event->size.width, m_Event->size.height));
+				m_Window->setView(sf::View(sf::FloatRect(0.0f, 0.0f, m_Event->size.width, m_Event->size.height)));
+
+				m_Editor->ifStart = false;
 			}
 
 			m_Editor->Events();
@@ -58,9 +62,9 @@ void LTE_Application::Update()
 
 void LTE_Application::Destroy()
 {
-	delete(m_Window);
-	delete(m_Event);
-	delete(m_Editor);
+	delete m_Window;
+	delete m_Event;
+	delete m_Editor;
 }
 
 void LTE_Application::Start()

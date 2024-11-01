@@ -24,6 +24,9 @@
     <ClCompile Include="LTE_EDITOR.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="LTE_WindowClass.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -35,6 +38,9 @@
     <ClInclude Include="LTE_EDITOR.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="LTE_WindowClass.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LT_EDITOR.rc">
@@ -43,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\LTE_Logo.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\LTE_Logo.ico">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\checkBox.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>
